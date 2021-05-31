@@ -11,7 +11,7 @@ RUN pip3 install mysqlclient
 RUN mkdir /openedx  openedx/frontpage
 
 
-RUN pip3 install frontpage uwsgi
+RUN pip3 install mezzanine uwsgi
 
 ## Here you can add your custom frontpage repository
 RUN git clone https://github.com/murat-polat/frontpageapp 
@@ -20,7 +20,7 @@ RUN cd /frontpageapp
 
 WORKDIR /frontpageapp/frontpageapp
 
-RUN pip3 install -r requirements.txt
+#RUN pip3 install -r requirements.txt
 
 #RUN python3 manage.py migrate
 

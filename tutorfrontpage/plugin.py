@@ -8,7 +8,7 @@ templates = pkg_resources.resource_filename(
     "tutorfrontpage", "templates"
 )
 
-onfig = {
+config = {
     "add": {
         "SECRET_KEY": "{{ 24|random_string }}",
     },
