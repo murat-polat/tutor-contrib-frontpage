@@ -1,0 +1,15 @@
+############# frontpage plugin
+
+frontpage:
+  image: {{ DOCKER_REGISTRY }}{{ FRONTPAGE_DOCKER_IMAGE }}
+  volumes:
+    - ../plugins/frontpage/apps/settings/tutor.py:/openedx/frontpage/frontpage/tutor.py
+    - ../../data/frontpage:/openedx/data
+
+  environment:      
+      SETTINGS: ${EDX_PLATFORM_SETTINGS:-tutor.production}   
+
+  restart: unless-stopped
+  depends_on:
+    - lms
+    - mysql

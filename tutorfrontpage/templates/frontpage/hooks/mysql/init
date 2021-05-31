@@ -1,0 +1,2 @@
+mysql -u root --password="{{ MYSQL_ROOT_PASSWORD }}" --host "{{ MYSQL_HOST }}" --port {{ MYSQL_PORT }} -e 'CREATE DATABASE IF NOT EXISTS {{ FRONTPAGE_MYSQL_DATABASE }};'
+mysql -u root --password="{{ MYSQL_ROOT_PASSWORD }}" --host "{{ MYSQL_HOST }}" --port {{ MYSQL_PORT }} -e 'GRANT ALL ON {{ FRONTPAGE_MYSQL_DATABASE }}.* TO "{{ FRONTPAGE_MYSQL_USERNAME }}"@"%" IDENTIFIED BY "{{ FRONTPAGE_MYSQL_PASSWORD }}";'

@@ -1,0 +1,8 @@
+frontpage-job:
+  image: {{ FRONTPAGE_DOCKER_IMAGE }}
+  volumes:
+    - ../plugins/frontpage/apps/settings/tutor.py:/openedx/frontpage/frontpage/tutor.py
+ 
+  depends_on:
+    - mysql
+    - lms

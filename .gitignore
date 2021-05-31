@@ -1,0 +1,7 @@
+.*.swp
+!.gitignore
+TODO
+__pycache__
+*.egg-info/
+/dist/
+*.__pycache__
