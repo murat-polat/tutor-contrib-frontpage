@@ -11,7 +11,7 @@ RUN pip3 install mysqlclient
 RUN mkdir /openedx  openedx/frontpage
 
 
-RUN pip3 install mezzanine uwsgi django==2.2
+RUN pip3 install mezzanine uwsgi django==1.11.29
 
 ## Here you can add your custom frontpage repository
 RUN git clone https://github.com/murat-polat/frontpageapp 
