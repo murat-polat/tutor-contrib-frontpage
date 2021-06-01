@@ -12,9 +12,7 @@ config = {
     "add": {
         "SECRET_KEY": "{{ 24|random_string }}",
     },
-# Django application need this configurations
-# After installation of plugin, run:
-# "tutor config save --set frontpage_HOST=frontpage.{{LMS_HOST}}" and the others
+
     "defaults": {
         "HOST": "frontpage.{{ LMS_HOST }}",
         "DOCKER_REGISTRY": "{{ DOCKER_REGISTRY }}",

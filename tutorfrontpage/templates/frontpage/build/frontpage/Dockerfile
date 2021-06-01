@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 
 LABEL MAINTAINER=MP
 RUN apt-get update && apt-get -y upgrade
@@ -11,7 +11,7 @@ RUN pip3 install mysqlclient
 RUN mkdir /openedx  openedx/frontpage
 
 
-RUN pip3 install mezzanine uwsgi
+RUN pip3 install mezzanine uwsgi django==1.8
 
 ## Here you can add your custom frontpage repository
 RUN git clone https://github.com/murat-polat/frontpageapp 
