@@ -16,9 +16,9 @@ RUN pip3 install mezzanine uwsgi django==1.8
 ## Here you can add your custom frontpage repository
 RUN git clone https://github.com/murat-polat/frontpageapp 
 
-RUN cd /frontpageapp
+RUN cd /frontpage
 
-WORKDIR /frontpageapp/frontpageapp
+WORKDIR /frontpage/frontpageapp
 
 #RUN pip3 install -r requirements.txt
 
