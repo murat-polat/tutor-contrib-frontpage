@@ -27,10 +27,10 @@ ABOUT = load_about()
 setup(
     name="tutor-contrib-frontpage",
     version=ABOUT["__version__"],
-    url="https://github.com/myusername/tutor-contrib-frontpage",
+    url="https://github.com/murat-polat/tutor-contrib-frontpage",
     project_urls={
-        "Code": "https://github.com/myusername/tutor-contrib-frontpage",
-        "Issue tracker": "https://github.com/myusername/tutor-contrib-frontpage/issues",
+        "Code": "https://github.com/murat-polat/tutor-contrib-frontpage",
+        "Issue tracker": "https://github.com/murat-polat/tutor-contrib-frontpage/issues",
     },
     license="AGPLv3",
     author="MP",

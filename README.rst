@@ -6,7 +6,7 @@ Installation
 
 ::
 
-    pip install git+https://github.com/myusername/tutor-contrib-frontpage
+    pip install git+https://github.com/murat-polat/tutor-contrib-frontpage
 
 Usage
 -----
