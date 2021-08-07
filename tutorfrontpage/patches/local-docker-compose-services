@@ -3,7 +3,7 @@
 frontpage:
   image: {{ DOCKER_REGISTRY }}{{ FRONTPAGE_DOCKER_IMAGE }}
   volumes:
-    - ../plugins/frontpage/apps/settings/tutor.py:/openedx/frontpage/frontpage/tutor.py
+    - ../plugins/frontpage/apps/settings/tutor.py:/openedx/frontpage/tutor.py
     - ../../data/frontpage:/openedx/data
 
   environment:      

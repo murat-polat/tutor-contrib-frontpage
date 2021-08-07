@@ -1,36 +1,29 @@
-FROM ubuntu:18.04
-
+FROM python:3.8-slim-buster
 LABEL MAINTAINER=MP
+
 RUN apt-get update && apt-get -y upgrade
 
 RUN apt-get -y install python3-dev default-libmysqlclient-dev build-essential nano vim telnet
 
 RUN apt-get -y install python3-pip  git curl 
 RUN pip3 install mysqlclient
+RUN pip3 install gunicorn
+RUN mkdir /frontpage
 
-RUN mkdir /openedx  openedx/frontpage
+WORKDIR /frontpage/
+
+RUN pip3 install coderedcms 
+
+RUN git clone https://github.com/murat-polat/homepage /frontpage
+
+RUN cd homepage
 
 
-RUN pip3 install mezzanine uwsgi django==1.8.19
+RUN pip3 install -r requirements.txt
 
-## Here you can add your custom frontpage repository
-RUN git clone https://github.com/murat-polat/frontpageapp 
-
-RUN cd /frontpageapp
-
-WORKDIR /frontpageapp
-
-#RUN pip3 install -r requirements.txt
-
-#RUN python3 manage.py migrate
 
 
 EXPOSE 8000
 
-CMD uwsgi \
-    --http 0.0.0.0:8000 \
-    --thunder-lock \
-    --single-interpreter \
-    --enable-threads \
-    --processes=2 \
-    --wsgi-file frontpageapp/wsgi.py
+
+CMD gunicorn --bind=0.0.0.0:8000 --workers 2 --max-requests=1000 homepage.wsgi:application
