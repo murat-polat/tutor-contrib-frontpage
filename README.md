@@ -1,5 +1,5 @@
 This is a plugin for Tutor Open edX, an can be used for marketing and other educational purposes.
-It's easy to insstall and customize like WordPress. Because plugings based of Wagtail and CodeRed CMS. Thanks a lot to the Vince Salvino :) https://github.com/coderedcorp/coderedcms 
+It's easy to install and customize like WordPress. Because plugins based of Wagtail and CodeRed CMS. Thanks a lot to the Vince Salvino :) https://github.com/coderedcorp/coderedcms 
 
 ### Installation:
 
