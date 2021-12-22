@@ -31,9 +31,32 @@ Go to https://frontpage.YourDomain.com
 - Login as a superuser:
   go to https://frontpage.YourDomain.com/admin
   username = admin
+
   password = admin
+
   than change your password and admin profile
 
   ![](src/adminProfile.png)
+
+- Fatching your courses from LMS API, by 
+  using VueJS and Axios:
+  To do this change your URL(LMS/domain)
+
+  Pages => Home => Edit
+
+  than change your API URL(your domain)
+
+  ![](src/FetchCourses.png)
+
+  and check it with " Preview " and " Publish" it.
+
+  ![](src/courses.png)
+
+  Other custumuzations are very easy, like Wordpress Gutenberg. Here is the documentations https://docs.coderedcorp.com/cms/
+
+  
+
+
+
 
 
