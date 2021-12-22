@@ -3,6 +3,8 @@ It's easy to install and customize like WordPress. Because plugins based of Wagt
 
 ### Installation:
 
+First of all you must add an A record to the your DNS management. Bacause Frontpage runs as a subdomain of your LMS_HOST. For example: if your domain is https://myedx.com so your marketing site will be https://frontpage.myedx.com 
+
 `pip3 install  tutor-contrib-frontpage`
 
 `tutor plugins list`
@@ -11,11 +13,27 @@ It's easy to install and customize like WordPress. Because plugins based of Wagt
 
 `tutor config save`
 
+`tutor local quickstart`
+
+### optional
+If you want to build your own images:
+
 `tutor images build frontpage`
 
-`tutor local quickstart`
+` tutor local quickstart`
+
+
+Go to https://frontpage.YourDomain.com
 
 
 ## Customization:
 
-First of all you must add an A record to the your DNS management. Bacause Frontpage runs as a subdomain of your LMS_HOST. For example: if your domain is https://myedx.com so your marketing site will be https://frontpage.myedx.com 
+- Login as a superuser:
+  go to https://frontpage.YourDomain.com/admin
+  username = admin
+  password = admin
+  than change your password and admin profile
+
+  ![](src/adminProfile.png)
+
+

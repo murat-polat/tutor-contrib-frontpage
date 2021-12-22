@@ -5,3 +5,6 @@ __pycache__
 *.egg-info/
 /dist/
 *.__pycache__
+
+dist
+.dist
